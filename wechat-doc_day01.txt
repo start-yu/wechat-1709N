@@ -97,11 +97,19 @@ Day02，Day03 微信小程序的开发
 
 31. 创建项目: wechat-1709N/server-official-account
 
-32. 在 server/ 下，npm init，生成 package.json
+32. 在 server-official-account/ 下，npm init，生成 package.json
 
-33. 在 server/ 下，npm i -S express
+33. 在 server-official-account/ 下，npm i -S express
 
-34. 在 server/ 下，创建 app.js 文件
+34. 在 server-official-account/ 下，创建 app.js 文件
     const EXPRESS = require('express');
     let app = new EXPRESS();
-    app.listen(3000);1`
+    app.listen(3000);
+
+35. 下载：ngrok-stable-windows-amd64.zip
+    或
+    执行命令 npm i -g ngrok
+
+36. 在 server-official-account/ 下，npm i -S wechat
+
+
