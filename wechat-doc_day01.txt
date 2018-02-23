@@ -1,0 +1,107 @@
+微信开发
+
+Day01 微信公众号的开发
+Day02，Day03 微信小程序的开发
+
+1. 补充：Ionic
+	 ionic start app blank
+
+2. sidemenu
+	 2.1 ionic start app-sidemenu sidemenu
+	 2.2 Ctrl + C
+	 2.3 cd app-sidemenu
+	 2.4 npm i
+	 2.5 ionic serve -l
+
+3. tabs
+	 ionic start app-tabs tabs
+
+4. npm i -g cnpm --registry=https://registry.npm.taobao.org
+
+5. cnpm i (不推荐)
+
+6. 创建一个新的 tab 页
+
+7. ionic g page test
+
+8. 在 tabs.ts 中
+		8.1 import { TestPage } from '../test/test';
+		8.2 tab4Root = TestPage;
+
+9. 在 tabs.html 中
+		<ion-tab [root]="tab4Root" tabTitle="Test" tabIcon="heart"></ion-tab>
+
+10. 在 app.module.ts 中
+		10.1 import { TestPage } from '../pages/test/test';
+		10.2 在 declaractions 和 entryComponents 中添加 TestPage
+
+11. tabs 中实现页面的 lazy loading (npm 安装项目依赖)
+
+12. 修改 tabs.ts 文件
+		tab4Root = 'TestPage';
+
+13. 修改 tabs.html 文件
+		<ion-tab [root]="tab4Root" tabTitle="LazyTest" tabIcon="cart"></ion-tab>
+
+14. 微信开发 - 微信公众号的开发
+
+15. 官网：https://mp.weixin.qq.com (mp = Media Platform)
+
+16. 微信个人订阅号
+
+17. 新媒体：博客，微博，微信，视频，音频，知乎
+		传统媒体：报纸，杂志，广播，电视
+
+18. 自媒体：每个人可以创建一个媒体，依赖某一种媒体平台
+
+19. 注册微信个人订阅号
+	19.1 注册
+	19.2 订阅号
+	19.3 填写注册表单，输入验证码，提交
+	19.4 确认选择订阅号
+	19.5 主体信息登记
+	19.6 填写账号相关信息
+	19.7 进入公众号管理页面
+
+一、微信公众号的编辑模式
+
+20. 设置 - 公众号设置
+		https://iconfinder.com
+
+21. 功能 - 自动回复
+	21.1 关键词回复
+	21.2 收到消息回复
+	21.3 被关注回复
+
+22. 管理 - 素材管理
+	https://unsplash.com
+
+23. 功能 - 自定义菜单
+
+24. 功能 - 投票管理
+		管理 - 素材管理 - 新建图文素材 - 投票
+
+25. 管理 - 消息管理
+
+26. 管理 - 用户管理
+
+二、微信公众号的开发模式
+
+27. 开发 - 基本配置
+
+28. 编辑模式和开发模式同时只能使用其一
+
+29. 启用开发模式：开发 - 基本配置 - 修改配置
+
+30. 使用 Node.js 的 Express 框架搭建一个简单的 Web 服务器
+
+31. 创建项目: wechat-1709N/server-official-account
+
+32. 在 server/ 下，npm init，生成 package.json
+
+33. 在 server/ 下，npm i -S express
+
+34. 在 server/ 下，创建 app.js 文件
+    const EXPRESS = require('express');
+    let app = new EXPRESS();
+    app.listen(3000);1`
