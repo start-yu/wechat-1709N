@@ -112,4 +112,42 @@ Day02，Day03 微信小程序的开发
 
 36. 在 server-official-account/ 下，npm i -S wechat
 
+37. npm i -g supervisor
+
+38. 在 package.json 中，添加命令
+    "start": "supervisor app"
+
+39. 启动服务器：npm start
+
+40. 配置微信公众号的服务器
+
+41. 修改 app.js 文件
+    const WEIXIN = require('wechat');
+    let config = {
+        appid: '',
+        token: '',
+        encodingAESKey: '',
+    };
+
+42. 在微信公众号管理平台，开发 - 基本配置，复制开发者 ID(AppID)，设置为 config 的 appid 的值
+
+43. 在微信公众号管理平台，开发 - 基本配置 - 修改配置，设置 token，设置为 config 的 token 的值
+
+44. 在微信公众号管理平台，开发 - 基本配置 - 修改配置，设置 encodingAESKey，设置为 config 的 encodingAESKey 的值
+
+45. 解压 ngrok， 进入目录，执行命令：ngrok.exe http 3000
+    隧道服务，生成公网地址，指向本地地址
+    把 https 公网地址填入 URL 处
+
+46. 在 app.js 中
+
+    app.get('/', WECHAT(config, (req, res, next) => {
+        let message = req.weixin;
+        console.log(message);
+    }));
+
+47. 在微信公众号管理平台，开发 - 基本配置 - 修改配置，提交
+
+48. 启用开发模式
+
 
